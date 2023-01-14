@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+    background-color: white;
+    width: 30%;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.form-control:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+#forgot-passw {
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+    font-size: 13px;
+}
+
+#forgot-passw:hover {
+text-decoration: underline;
+color: black;
+}
+
+.btn {
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
