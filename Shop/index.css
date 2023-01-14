@@ -4,25 +4,42 @@
 
 body {
   margin: 0px;
-  font-family: "Play", sans-serif;
-  background-color: #2C3333;
-  color: white;
+  padding: 0px;
 }
 
-h2 {
-  margin: 50px 20px;
+#elementor {
+  background-image: url(https://n.foxdsgn.com/floreal/wp-content/uploads/2020/06/shop_banneg_bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 15px 200px 15px;
   font-size: 60px;
   text-align: center;
   align-self: center;
+}
+
+#elementor-overlay {
+  background-color: #272727;
+  opacity: 0.3;
+  height: 400px;
+  width: 1224px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#elementor > h1 {
+  position: absolute;
+  z-index: 1;
+  color: white;
 }
 
 .tool-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 20px 20px 20px;
+  margin: 100px 20px 20px 20px;
   padding: 10px;
-  background-color: #374242;
   height: 45px;
   border-radius: 7px;
 }
@@ -35,13 +52,13 @@ h2 {
   background-color: transparent;
   border: none;
   font-size: 15px;
-  font-family: "Play", sans-serif;
-  color: white;
+  transform: 2s;
 }
 
 #asc:hover,
 #desc:hover {
-  color:#a5c9ca;
+  color: #f79aab;
+  font-weight: 500;
 }
 
 .catagories {
@@ -49,22 +66,18 @@ h2 {
 }
 
 label {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 select {
-  padding: 2px;
-  font-family: "Play", sans-serif;
+  height: auto !important;
+  padding: 10px;
   height: 33px;
-  border-radius: 7px;
+  border-radius: 90px;
   font-size: 15px;
-  color: rgb(212, 212, 212);
   background-color: transparent;
 }
 
-option {
-  background-color: #2C3333;
-}
 
 #products-list {
   margin: 10px;
@@ -79,21 +92,25 @@ option {
 .product {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 23%;
   height: max-content;
   margin-bottom: 20px;
-  /* padding: 10px; */
-  /* background-color:rgb(53, 53, 53); */
-  /* border: 1px solid rgb(158, 158, 158); */
   border-radius: 5px;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+
+
+.product-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   margin-bottom: 10px;
   justify-self: center;
+  transition: 0.5s;
+}
+
+img:hover {
+  transform: scale(1.1);
 }
 
 .product-name {
@@ -101,13 +118,12 @@ img {
   padding: 0px 10px;
   font-size: 17px;
   display: flex;
-  /* justify-self: left; */
   align-items: center;
   height: 40px;
 }
 
 .product-name:hover {
-  color: #a5c9ca;
+  font-weight: 500;
 }
 
 .product-price {
@@ -115,5 +131,5 @@ img {
   font-weight: bold;
   margin-bottom: 20px;
   padding: 0px 10px;
-  color: #a5c9ca;
+  color: #f79aab;
 }

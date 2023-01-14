@@ -1,59 +1,87 @@
 const list = [
   {
-    name: "Tai nghe bluetooth chống ồn V5.0",
-    price: 290000,
-    type: "earphone",
+    name: "Hoa mai giảo lá gai",
+    price: 215000,
+    type: "flower",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/90/55/ea/340eb77f1170e4c381c866c275138a82.jpg.webp",
+      "../assets/hoa mai giảo lá gai.jpg",
   },
   {
-    name: "Tai nghe JBL C150SI",
-    price: 235000,
-    type: "earphone",
+    name: "Bình xịt bóng lá",
+    price: 149000,
+    type: "accessories",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/37/f0/49/fc18ee8fbf3a5f8b76b1b374c0db8851.jpg.webp",
+      "../assets/bình xịt bóng lá.png",
   },
   {
-    name: "Chuột không dây Logitech M220 Silent",
-    price: 219000,
-    type: "mouse",
+    name: "Hoa đào Nhật Tân",
+    price: 500000,
+    type: "flower",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/33/82/18/5b3a94d00db81dcc6a7a2a8bd62cad04.jpg.webp",
+      "../assets/hoa đào Nhật Tân.jpg",
   },
   {
-    name: "Chuột chơi game G5",
+    name: "Lọ hoa gốm phong cách châu Âu",
+    price: 349000,
+    type: "vase",
+    image:
+      "../assets/lọ hoa gốm phong cách châu Âu.jpg",
+  },
+  {
+    name: "Cành cây tuyết dẻo trắng",
     price: 509000,
-    type: "mouse",
+    type: "accessories",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/aa/e7/92/f6767d13b63b70c89e2e39360cff84c0.jpg.webp",
+      "../assets/cành cây tuyết dẻo trắng.png",
   },
   {
-    name: "Bàn phím gấp 3 ZAGG Universal Keyboards",
-    price: 1520000,
-    type: "keyboards",
+    name: "Hoa đồng tiền",
+    price: 800000,
+    type: "flower",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/a1/40/36/80c26fdf3f02e2f61f711030ace3bc74.png.webp",
+      "../assets/hoa đồng tiền.png",
   },
   {
-    name: "Samsung Galaxy S20 FE",
-    price: 8790000,
-    type: "smartphone",
+    name: "Lọ hoa thủy tinh cao cấp",
+    price: 43000,
+    type: "vase",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/98/28/4a/7ec6ad5943179c4b2ad5ae8b79798599.jpeg.webp",
+      "../assets/lọ hoa thủy tinh cao cấp.jpg",
   },
   {
-    name: "Apple iphone 14 pro max",
-    price: 33490000,
-    type: "smartphone",
+    name: "Ruy băng",
+    price: 20000,
+    type: "accessories",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/0c/dd/e7/e6431984901119a1f8166cc4e579da93.png.webp",
+      "../assets/ruy băng.jpg",
   },
   {
-    name: "Điện thoại Oppo A55",
-    price: 3750000,
-    type: "smartphone",
+    name: "Lan hồ điệp",
+    price: 200000,
+    type: "flower",
     image:
-      "https://salt.tikicdn.com/cache/280x280/ts/product/6f/b1/16/2a0e5c3f718d20d998cd13ccc84864b0.jpg.webp",
+      "../assets/lan hồ điệp.png",
+  },
+  {
+    name: "Chậu hoa tròn",
+    price: 80000,
+    type: "vase",
+    image:
+      "../assets/chậu hoa tròn.jpg",
+  },
+  {
+    name: "Mút cắm hoa",
+    price: 20000,
+    type: "accessories",
+    image:
+      "../assets/mút cắm hoa.jpg",
+  },
+  {
+    name: "Lọ hoa cao xanh biển",
+    price: 200000,
+    type: "vase",
+    image:
+      "../assets/lọ hoa cao xanh biển.jpg",
   },
 ];
 localStorage.setItem("products", JSON.stringify(list));
@@ -78,7 +106,7 @@ function render(productsList) {
       // Nội dung chèn
       `
           <li class="product">
-            <div class="product-img"><img src="${element.image}"></div>
+            <div class="product-img overflow-hidden"><img src="${element.image}"></div>
             <span class="product-name">${element.name}</span>
             <span class="product-price">${element.price}đ</span>
           </li>
@@ -137,9 +165,9 @@ filterSelect.onchange = function () {
   const typeSelected = filterSelect.value;
   let filteredProducts = [];
   switch (typeSelected) {
-    case "earphone":
+    case "flower":
       filteredProducts = products.filter(function (element) {
-        if (element.type == "earphone") {
+        if (element.type == "flower") {
           return true;
         } else {
           return false;
@@ -147,9 +175,9 @@ filterSelect.onchange = function () {
       });
       break;
 
-    case "mouse":
+    case "vase":
       filteredProducts = products.filter(function (element) {
-        if (element.type == "mouse") {
+        if (element.type == "vase") {
           return true;
         } else {
           return false;
@@ -157,9 +185,9 @@ filterSelect.onchange = function () {
       });
       break;
 
-      case "keyboards":
+      case "accessories":
       filteredProducts = products.filter(function (element) {
-        if (element.type == "keyboards") {
+        if (element.type == "accessories") {
           return true;
         } else {
           return false;

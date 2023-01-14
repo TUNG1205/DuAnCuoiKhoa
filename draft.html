@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
+
+    <style>
+      :root {
+        --primary-color: #bd0100;
+        --secondary-color: #ffc94f;
+      }
+      #food .card {
+        background-color: transparent;
+        border: none;
+        color: var(--primary-color);
+        border-radius: 0;
+        margin-bottom: 20px;
+        width: calc((100% - 45px) / 4);
+        cursor: help;
+      }
+
+      #food .card-body {
+        padding: var(--bs-card-spacer-y) 0;
+      }
+
+      #food .card-img-top {
+        border-radius: 7px;
+        height: 165px;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      #food .card:hover .card-img-top {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container-3">
+      <div class="container">
+        <div id="foods" class="row">
+          <h1 data-aos="fade-in">Các món ăn ngày tết</h1>
+          <div id="food" class="d-flex">
+            <div class="card" data-aos="fade-down" data-aos-delay="50">
+              <div class="overflow-hidden">
+                <img
+                  src="https://image.vtc.vn/files/phamquy/2019/01/30/banh-chung-0218134.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Bánh chưng</h5>
+                <p class="card-text">
+                  Bánh chưng là món đã có lịch sử lâu đời trong văn hóa ẩm thực
+                  Việt Nam. Do đó trong mâm cỗ ngày Tết sẽ không thể thiếu món
+                  ăn này.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="100">
+              <div class="overflow-hidden">
+                <img
+                  src="https://cdn.tgdd.vn/Files/2020/11/18/1307586/dan-trong-nghe-mach-cach-xao-nep-goi-banh-tet-thom-ngon-hap-dan-202011181349419001.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Bánh tét</h5>
+                <p class="card-text">
+                  Bánh tét, có nơi gọi là bánh đòn, là nét tương đồng của bánh
+                  chưng ở Miền Bắc về nguyên liệu, cách nấu
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="150">
+              <div class="overflow-hidden">
+                <img
+                  src="http://cdn.tgdd.vn/Files/2019/10/08/1206351/muon-thit-kho-tau-ngon-hoan-hao-dung-bo-qua-5-bi-quyet-nay-202202141320249940.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Thịt kho tàu</h5>
+                <p class="card-text">
+                  Những ngày giáp Tết, bên cạnh công việc nấu bánh tét, các gia
+                  đình còn hay chuẩn bị một nồi thịt kho tàu to để ăn vào những
+                  ngày này.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="200">
+              <div class="overflow-hidden">
+                <img
+                  src="https://nguquynh.com.vn/upload/news/cukieungammam.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dưa hành</h5>
+                <p class="card-text">
+                  Một trong những món dân dã nhưng lại có vị trí đặc biệt trong
+                  mâm cỗ đó chính là món hành muối chua, hay còn gọi là dưa
+                  hành.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="250">
+              <div class="overflow-hidden">
+                <img
+                  src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/12/nem-ran-mau-vang-ong-hap-dan.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Nem rán</h5>
+                <p class="card-text">
+                  Bên ngoài màu vàng óng, bên trong thì chứa đầy thịt, mộc nhĩ
+                  và giá, nem rán là món ăn độc đáo và hấp dẫn không thể thiếu
+                  được trong những ngày Tết.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="300">
+              <div class="overflow-hidden">
+                <img
+                  src="https://i-ngoisao.vnecdn.net/2021/07/02/205039701-526251145476854-8722-3502-3692-1625212714.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Xôi gấc</h5>
+                <p class="card-text">
+                  Theo quan niệm của người xưa, màu đỏ là màu của may mắn, màu
+                  của hạnh phúc lứa đôi. Vì vậy trong những ngày Tết thì nhất
+                  định phải có 1 đĩa xôi gấc.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="350">
+              <div class="overflow-hidden">
+                <img
+                  src="https://cdn.tgdd.vn/Files/2017/09/18/1022436/an-lap-xuong-the-nao-de-dam-bao-suc-khoe-202201171111044765.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Lạp xưởng</h5>
+                <p class="card-text">
+                  Cứ mỗi khi Tết, nhu cầu tìm mua lạp xưởng không thể thiếu
+                  trong mâm cơm với rất nhiều loại lạp xưởng từ tươi, khô, nạc,
+                  tôm, cá…
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down" data-aos-delay="400">
+              <div class="overflow-hidden">
+                <img
+                  src="https://cdn.tgdd.vn/2020/08/CookProduct/12-1200x676.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Giò</h5>
+                <p class="card-text">
+                  Với vị trí trung tâm của mâm cỗ ngày Tết, giò dường như là một
+                  trong những món ăn chắc chắn phải có. với ý nghĩa “trong ấm
+                  ngoài êm, phúc lộc đầy nhà”.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
