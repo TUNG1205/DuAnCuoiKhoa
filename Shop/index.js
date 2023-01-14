@@ -3,85 +3,73 @@ const list = [
     name: "Hoa mai giảo lá gai",
     price: 215000,
     type: "flower",
-    image:
-      "../assets/hoa mai giảo lá gai.jpg",
+    image: "../assets/hoa mai giảo lá gai.jpg",
   },
   {
     name: "Bình xịt bóng lá",
     price: 149000,
     type: "accessories",
-    image:
-      "../assets/bình xịt bóng lá.png",
+    image: "../assets/bình xịt bóng lá.png",
   },
   {
     name: "Hoa đào Nhật Tân",
     price: 500000,
     type: "flower",
-    image:
-      "../assets/hoa đào Nhật Tân.jpg",
+    image: "../assets/hoa đào Nhật Tân.jpg",
   },
   {
     name: "Lọ hoa gốm phong cách châu Âu",
     price: 349000,
     type: "vase",
-    image:
-      "../assets/lọ hoa gốm phong cách châu Âu.jpg",
+    image: "../assets/lọ hoa gốm phong cách châu Âu.jpg",
   },
   {
     name: "Cành cây tuyết dẻo trắng",
     price: 509000,
     type: "accessories",
-    image:
-      "../assets/cành cây tuyết dẻo trắng.png",
+    image: "../assets/cành cây tuyết dẻo trắng.png",
   },
   {
     name: "Hoa đồng tiền",
     price: 800000,
     type: "flower",
-    image:
-      "../assets/hoa đồng tiền.png",
+    image: "../assets/hoa đồng tiền.png",
   },
   {
     name: "Lọ hoa thủy tinh cao cấp",
     price: 43000,
     type: "vase",
-    image:
-      "../assets/lọ hoa thủy tinh cao cấp.jpg",
+    image: "../assets/lọ hoa thủy tinh cao cấp.jpg",
   },
   {
     name: "Ruy băng",
     price: 20000,
     type: "accessories",
-    image:
-      "../assets/ruy băng.jpg",
+    image: "../assets/ruy băng.jpg",
   },
   {
     name: "Lan hồ điệp",
     price: 200000,
     type: "flower",
-    image:
-      "../assets/lan hồ điệp.png",
+    image: "../assets/lan hồ điệp.png",
   },
   {
     name: "Chậu hoa tròn",
     price: 80000,
     type: "vase",
-    image:
-      "../assets/chậu hoa tròn.jpg",
+    image: "../assets/chậu hoa tròn.jpg",
   },
   {
     name: "Mút cắm hoa",
     price: 20000,
     type: "accessories",
-    image:
-      "../assets/mút cắm hoa.jpg",
+    image: "../assets/mút cắm hoa.jpg",
   },
   {
     name: "Lọ hoa cao xanh biển",
     price: 200000,
     type: "vase",
-    image:
-      "../assets/lọ hoa cao xanh biển.jpg",
+    image: "../assets/lọ hoa cao xanh biển.jpg",
   },
 ];
 localStorage.setItem("products", JSON.stringify(list));
@@ -106,9 +94,13 @@ function render(productsList) {
       // Nội dung chèn
       `
           <li class="product">
-            <div class="product-img overflow-hidden"><img src="${element.image}"></div>
-            <span class="product-name">${element.name}</span>
+            <div class="overflow-hidden"><img class="product-img" src="${element.image}"></div>
+            <div class="card-body">
+            <a class="product-name card-title">
+            ${element.name}
+            </a>
             <span class="product-price">${element.price}đ</span>
+            </div>
           </li>
       `
     );
@@ -185,7 +177,7 @@ filterSelect.onchange = function () {
       });
       break;
 
-      case "accessories":
+    case "accessories":
       filteredProducts = products.filter(function (element) {
         if (element.type == "accessories") {
           return true;
@@ -195,15 +187,15 @@ filterSelect.onchange = function () {
       });
       break;
 
-      case "smartphone":
-        filteredProducts = products.filter(function (element) {
-          if (element.type == "smartphone") {
-            return true;
-          } else {
-            return false;
-          }
-        });
-        break;
+    case "smartphone":
+      filteredProducts = products.filter(function (element) {
+        if (element.type == "smartphone") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      break;
 
     default:
       filteredProducts = products;
