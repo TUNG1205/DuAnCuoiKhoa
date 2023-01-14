@@ -1,71 +1,83 @@
 const list = [
   {
+    id: 1,
     name: "Hoa mai giảo lá gai",
     price: 215000,
     type: "flower",
     image: "../assets/hoa mai giảo lá gai.jpg",
   },
   {
+    id: 2,
     name: "Bình xịt bóng lá",
     price: 149000,
     type: "accessories",
     image: "../assets/bình xịt bóng lá.png",
   },
   {
+    id: 3,
     name: "Hoa đào Nhật Tân",
     price: 500000,
     type: "flower",
     image: "../assets/hoa đào Nhật Tân.jpg",
   },
   {
+    id: 4,
     name: "Lọ hoa gốm phong cách châu Âu",
     price: 349000,
     type: "vase",
     image: "../assets/lọ hoa gốm phong cách châu Âu.jpg",
   },
   {
+    id: 5,
     name: "Cành cây tuyết dẻo trắng",
     price: 509000,
     type: "accessories",
     image: "../assets/cành cây tuyết dẻo trắng.png",
   },
   {
+    id: 6,
     name: "Hoa đồng tiền",
     price: 800000,
     type: "flower",
     image: "../assets/hoa đồng tiền.png",
   },
   {
+    id: 7,
     name: "Lọ hoa thủy tinh cao cấp",
     price: 43000,
     type: "vase",
     image: "../assets/lọ hoa thủy tinh cao cấp.jpg",
   },
   {
+    id: 8,
     name: "Ruy băng",
     price: 20000,
     type: "accessories",
     image: "../assets/ruy băng.jpg",
   },
   {
+    id: 9,
     name: "Lan hồ điệp",
     price: 200000,
     type: "flower",
     image: "../assets/lan hồ điệp.png",
   },
   {
+    id: 10,
     name: "Chậu hoa tròn",
     price: 80000,
     type: "vase",
     image: "../assets/chậu hoa tròn.jpg",
   },
   {
+    id: 11,
     name: "Mút cắm hoa",
     price: 20000,
     type: "accessories",
     image: "../assets/mút cắm hoa.jpg",
   },
   {
+    id: 12,
     name: "Lọ hoa cao xanh biển",
     price: 200000,
     type: "vase",
@@ -96,7 +108,9 @@ function render(productsList) {
           <li class="product">
             <div class="overflow-hidden"><img class="product-img" src="${element.image}"></div>
             <div class="card-body">
-            <a class="product-name card-title">
+            <a 
+            class="product-name card-title" 
+            href="http://127.0.0.1:5500/Product/product.html?id=${element.id}">
             ${element.name}
             </a>
             <span class="product-price">${element.price}đ</span>

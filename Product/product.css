@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.d-flex {
+    margin: 0 70px;
+}
+
+#title {
+    padding: 70px 30px;
+    margin-bottom: 150px;
+    background-color: #fef6f2;
+}
+
+#product-img {
+width: 588px;
+height: 624px;
+object-fit: cover;
+}
+
+.summary {
+    width: 38%;
+    padding-top: 5px;
+    margin-bottom: 0;
+    float: none;
+}
+
+#price {
+    margin-bottom: 7px;
+}
